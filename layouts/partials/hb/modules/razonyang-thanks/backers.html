@@ -1,0 +1,21 @@
+{{- $levels := slice "gold" "silver" "bronze" }}
+{{- range $levels }}
+  {{- $lvl := . }}
+  {{- with index site.Data.backers . }}
+    <h2 class="text-center mb-3">{{ $lvl | printf "%s_backers" | i18n }}</h2>
+    <ul class="nav justify-content-center mb-5">
+      {{- range . }}
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center justify-content-center"
+            href="{{ .url }}"
+            target="_blank"
+            title="{{ .name }}"
+            rel="external">
+            {{- .name -}}
+          </a>
+        </li>
+      {{- end }}
+    </ul>
+  {{- end }}
+{{- end -}}

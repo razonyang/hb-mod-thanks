@@ -1,0 +1,23 @@
+[bronze_backers]
+other = "铜牌支持者"
+
+[bronze_sponsors]
+other = "铜牌赞助商"
+
+[contributors]
+other = "贡献者"
+
+[gold_backers]
+other = "金牌支持者"
+
+[gold_sponsors]
+other = "金牌赞助商"
+
+[silver_backers]
+other = "银牌支持者"
+
+[silver_sponsors]
+other = "银牌赞助商"
+
+[sponsors]
+other = "赞助商"

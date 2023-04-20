@@ -1,0 +1,23 @@
+[bronze_backers]
+other = "Bronze backers"
+
+[bronze_sponsors]
+other = "Bronze sponsors"
+
+[contributors]
+other = "Contributors"
+
+[gold_backers]
+other = "Gold backers"
+
+[gold_sponsors]
+other = "Gold sponsors"
+
+[silver_backers]
+other = "Silver backers"
+
+[silver_sponsors]
+other = "Silver sponsors"
+
+[sponsors]
+other = "Sponsors"

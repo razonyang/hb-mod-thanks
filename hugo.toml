@@ -1,0 +1,14 @@
+# [module.hugoVersion]
+# min = "0.111.3"
+
+[[module.imports]]
+path = "github.com/hbstack/hb"
+
+[params.hugopress.modules.hb-razonyang-thanks.hooks.hb-footer-end]
+cacheable = true
+
+[params.hugopress.modules.hb-razonyang-thanks.hooks.hb-docs-doc-toc-end]
+cacheable = true
+
+[params.hugopress.modules.hb-razonyang-thanks.hooks.hb-blog-post-toc-end]
+cacheable = true

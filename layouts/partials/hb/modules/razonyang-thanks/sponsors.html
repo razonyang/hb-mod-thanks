@@ -1,0 +1,28 @@
+{{- $heading := default true .Heading }}
+{{- $levels := default (slice "gold" "silver" "bronze") .Levels }}
+{{- $alignment := default "center" .Alignment }}
+{{- range $levels }}
+  {{- $lvl := . }}
+  {{- with index site.Data.sponsors . }}
+    {{- if $heading }}
+      <h2 class="text-center mb-3">{{ $lvl | printf "%s_sponsors" | i18n }}</h2>
+    {{- end }}
+    <ul class="nav justify-content-{{ $alignment }} mb-5">
+      {{- range sort . "weight" }}
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center justify-content-center"
+            href="{{ .url }}"
+            target="_blank"
+            title="{{ .alt }}"
+            rel="external">
+            <img
+              class="sponsor-img img-fluid"
+              src="{{ .img }}"
+              alt="{{ .alt }}" />
+          </a>
+        </li>
+      {{- end }}
+    </ul>
+  {{- end }}
+{{- end -}}
