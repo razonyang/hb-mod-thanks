@@ -1,23 +1,26 @@
 {{- with site.Data.contributors }}
-<h2 class="text-center mb-3">{{ i18n "contributors" }}</h2>
-<ul
-  class="nav justify-content-center mb-5">
-  {{- range sort . "contributions" "desc" }}
-    <li class="nav-item">
-      <a
-        class="nav-link d-flex align-items-center justify-content-center"
-        href="https://github.com/{{ .login }}"
-        target="_blank"
-        title="{{ .login }}"
-        rel="external">
-        <img
-          class="contributor-img img-fluid rounded-circle"
-          width="400"
-          height="400"
-          src="{{ .avatar }}"
-          alt="{{ .login }}" />
-      </a>
-    </li>
-  {{- end }}
-</ul>
+  <h2 class="text-center mb-3">{{ i18n "contributors" }}</h2>
+  <ul class="nav justify-content-center mb-5">
+    {{- range sort . "contributions" "desc" }}
+      <li class="nav-item">
+        <a
+          class="nav-link d-flex align-items-center justify-content-center"
+          href="https://github.com/{{ .login }}"
+          target="_blank"
+          title="{{ .login }}"
+          rel="external">
+          {{- if .avatar }}
+            <img
+              class="contributor-img img-fluid rounded-circle"
+              width="400"
+              height="400"
+              src="{{ .avatar }}"
+              alt="{{ .login }}" />
+          {{- else }}
+            <div class="contributor-img-placeholder rounded-circle bg-body-secondary text-body" data-first-char="{{ substr .login 0 1 }}"></div>
+          {{- end }}
+        </a>
+      </li>
+    {{- end }}
+  </ul>
 {{- end -}}

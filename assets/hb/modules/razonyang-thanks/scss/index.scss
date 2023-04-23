@@ -3,3 +3,18 @@
     height: 64px;
     width: auto;
 }
+
+.contributor-img-placeholder {
+    height: 64px;
+    width: 64px;
+
+    &::after {
+        align-items: center;
+        content: attr(data-first-char);
+        display: flex;
+        font-size: 1.5rem;
+        height: 100%;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+}
