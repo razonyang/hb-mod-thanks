@@ -4,7 +4,7 @@
     {{- range sort . "contributions" "desc" }}
       <li class="nav-item">
         <a
-          class="nav-link d-flex align-items-center justify-content-center"
+          class="nav-link d-flex align-items-center justify-content-center position-relative"
           href="https://github.com/{{ .login }}"
           target="_blank"
           title="{{ .login }}"
@@ -19,6 +19,9 @@
           {{- else }}
             <div class="contributor-img-placeholder rounded-circle bg-body-secondary text-body" data-first-char="{{ substr .login 0 1 }}"></div>
           {{- end }}
+          <span class="badge bg-secondary position-absolute top-0 end-0 fw-normal rounded rounded-3">
+            {{- .contributions -}}
+          </span>
         </a>
       </li>
     {{- end }}
