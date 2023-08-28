@@ -1,12 +1,19 @@
-.contributor-img,
 .sponsor-img {
     height: 64px;
+}
+
+.contributor-img {
+    height: 48px;
+}
+
+.contributor-img,
+.sponsor-img {
     width: auto;
 }
 
 .contributor-img-placeholder {
-    height: 64px;
-    width: 64px;
+    height: 48px;
+    width: 48px;
 
     &::after {
         align-items: center;

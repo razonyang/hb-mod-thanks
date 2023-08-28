@@ -1,21 +1,34 @@
 {{- $levels := slice "gold" "silver" "bronze" }}
+{{- $backers := slice }}
 {{- range $levels }}
   {{- $lvl := . }}
   {{- with index site.Data.backers . }}
-    <h2 class="text-center mb-3">{{ $lvl | printf "%s_backers" | i18n }}</h2>
-    <ul class="nav justify-content-center mb-5">
-      {{- range . }}
-        <li class="nav-item">
-          <a
-            class="nav-link d-flex align-items-center justify-content-center"
-            href="{{ .url }}"
-            target="_blank"
-            title="{{ .name }}"
-            rel="external">
-            {{- .name -}}
-          </a>
-        </li>
-      {{- end }}
-    </ul>
+    {{- $backers = $backers | append (sort . "weight") }}
   {{- end }}
 {{- end -}}
+{{- with $backers }}
+  <ul class="nav justify-content-center mb-5">
+    {{- range . }}
+      <li class="nav-item">
+        <a
+          class="nav-link d-flex flex-column align-items-center justify-content-center"
+          href="{{ .url }}"
+          target="_blank"
+          title="{{ .name }}"
+          rel="external">
+          {{- if .avatar_url }}
+            <img
+              class="contributor-img img-fluid rounded-circle mb-2"
+              src="{{ .avatar_url }}"
+              alt="{{ .name }}" />
+          {{- else }}
+            <div
+              class="contributor-img-placeholder rounded-circle bg-body-secondary text-body mb-2"
+              data-first-char="{{ substr .name 0 1 }}"></div>
+          {{- end }}
+          {{ .name }}
+        </a>
+      </li>
+    {{- end }}
+  </ul>
+{{- end }}
