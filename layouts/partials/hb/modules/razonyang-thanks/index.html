@@ -13,7 +13,7 @@
         role="tab"
         aria-controls="thanks-tab-pane-sponsors"
         aria-selected="true">
-        {{ i18n "sponsors" }}
+        {{ i18n "sponsors" }} ({{ len site.Data.sponsors}})
       </button>
     </li>
     <li class="nav-item" role="presentation">
@@ -26,7 +26,7 @@
         role="tab"
         aria-controls="thanks-tab-pane-backers"
         aria-selected="false">
-        {{ i18n "backers" }}
+        {{ i18n "backers" }} ({{ len site.Data.backers}})
       </button>
     </li>
     <li class="nav-item" role="presentation">
@@ -39,7 +39,7 @@
         role="tab"
         aria-controls="thanks-tab-pane-contributors"
         aria-selected="false">
-        {{ i18n "contributors" }}
+        {{ i18n "contributors" }}({{ len site.Data.contributors }})
       </button>
     </li>
   </ul>
