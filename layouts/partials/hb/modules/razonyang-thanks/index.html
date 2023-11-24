@@ -16,7 +16,11 @@
     <h2 id="backers" class="d-flex justify-content-center align-items-center mb-4">
       {{- i18n "backers" -}}
       <span class="badge bg-primary ms-2 rounded-circle fw-normal fs-6">
-        {{- len site.Data.backers -}}
+        {{- $backerCount := 0 }}
+        {{- range site.Data.backers }}
+          {{- $backerCount = add $backerCount (len .) }}
+        {{- end }}
+        {{- $backerCount -}}
       </span>
     </h2>
     {{ partial "hb/modules/razonyang-thanks/backers" dict }}
