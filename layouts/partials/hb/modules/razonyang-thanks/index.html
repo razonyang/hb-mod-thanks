@@ -2,71 +2,32 @@
   <h1 class="text-center mb-4">{{ .Title }}</h1>
   <div class="lead text-center mb-4">{{ .Description }}</div>
   {{ partial "hb/modules/razonyang-thanks/socials" . }}
-  <ul class="nav nav-underline justify-content-center mb-4" id="thanks-tab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button
-        class="nav-link active"
-        id="thanks-tab-sponsors"
-        data-bs-toggle="tab"
-        data-bs-target="#thanks-tab-pane-sponsors"
-        type="button"
-        role="tab"
-        aria-controls="thanks-tab-pane-sponsors"
-        aria-selected="true">
-        {{ i18n "sponsors" }} ({{ len site.Data.sponsors }})
-      </button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="thanks-tab-backers"
-        data-bs-toggle="tab"
-        data-bs-target="#thanks-tab-pane-backers"
-        type="button"
-        role="tab"
-        aria-controls="thanks-tab-pane-backers"
-        aria-selected="false">
-        {{ i18n "backers" }} ({{ len site.Data.backers }})
-      </button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="thanks-tab-contributors"
-        data-bs-toggle="tab"
-        data-bs-target="#thanks-tab-pane-contributors"
-        type="button"
-        role="tab"
-        aria-controls="thanks-tab-pane-contributors"
-        aria-selected="false">
-        {{ i18n "contributors" }}({{ len site.Data.contributors }})
-      </button>
-    </li>
-  </ul>
-  <div class="tab-content" id="thanks-tab-content">
-    <div
-      class="tab-pane fade show active"
-      id="thanks-tab-pane-sponsors"
-      role="tabpanel"
-      aria-labelledby="thanks-tab-sponsors"
-      tabindex="0">
-      {{ partial "hb/modules/razonyang-thanks/sponsors" dict }}
-    </div>
-    <div
-      class="tab-pane fade"
-      id="thanks-tab-pane-backers"
-      role="tabpanel"
-      aria-labelledby="thanks-tab-backers"
-      tabindex="0">
-      {{ partial "hb/modules/razonyang-thanks/backers" dict }}
-    </div>
-    <div
-      class="tab-pane fade"
-      id="thanks-tab-pane-contributors"
-      role="tabpanel"
-      aria-labelledby="thanks-tab-contributors"
-      tabindex="0">
-      {{ partial "hb/modules/razonyang-thanks/contributors" dict }}
-    </div>
+  <div class="position-relative">
+    <h2 id="sponsors" class="d-flex justify-content-center align-items-center mb-4">
+      {{- i18n "sponsors" -}}
+      <span
+        class="badge bg-primary ms-2 rounded-circle fw-normal fs-6">
+        {{- len site.Data.sponsors -}}
+      </span>
+    </h2>
+    {{ partial "hb/modules/razonyang-thanks/sponsors" dict }}
+  </div>
+  <div class="position-relative">
+    <h2 id="backers" class="d-flex justify-content-center align-items-center mb-4">
+      {{- i18n "backers" -}}
+      <span class="badge bg-primary ms-2 rounded-circle fw-normal fs-6">
+        {{- len site.Data.backers -}}
+      </span>
+    </h2>
+    {{ partial "hb/modules/razonyang-thanks/backers" dict }}
+  </div>
+  <div class="position-relative">
+    <h2 id="contributors" class="d-flex justify-content-center align-items-center mb-4">
+      {{- i18n "contributors" -}}
+      <span class="badge bg-primary ms-2 rounded-circle fw-normal fs-6">
+        {{- len site.Data.contributors -}}
+      </span>
+    </h2>
+    {{ partial "hb/modules/razonyang-thanks/contributors" dict }}
   </div>
 </div>
