@@ -18,12 +18,12 @@
           rel="external">
           {{- if .avatar_url }}
             <img
-              class="contributor-img img-fluid rounded-circle mb-2"
+              class="contributor-img img-fluid border rounded-circle mb-2"
               src="{{ .avatar_url }}"
               alt="{{ .name }}" />
           {{- else }}
             <div
-              class="contributor-img-placeholder rounded-circle bg-body-secondary text-body mb-2"
+              class="contributor-img-placeholder border rounded-circle bg-body-secondary text-body mb-2"
               data-first-char="{{ substr .name 0 1 }}"></div>
           {{- end }}
           {{ .name }}

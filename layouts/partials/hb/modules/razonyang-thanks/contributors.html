@@ -10,14 +10,14 @@
           rel="external">
           {{- if .avatar_url }}
             <img
-              class="contributor-img img-fluid rounded-circle mb-2"
+              class="contributor-img img-fluid border rounded-circle mb-2"
               width="400"
               height="400"
               src="{{ .avatar_url }}"
               alt="{{ .login }}" />
           {{- else }}
             <div
-              class="contributor-img-placeholder rounded-circle bg-body-secondary text-body mb-2"
+              class="contributor-img-placeholder border rounded-circle bg-body-secondary text-body mb-2"
               data-first-char="{{ substr .login 0 1 }}"></div>
           {{- end }}
           {{ .login }}
