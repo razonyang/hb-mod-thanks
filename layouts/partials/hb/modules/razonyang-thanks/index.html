@@ -1,8 +1,13 @@
 <div class="hb-thanks">
   <h1 class="text-center mb-4">{{ .Title }}</h1>
   <div class="lead text-center mb-4">{{ .Description }}</div>
-  {{ partial "hb/modules/razonyang-thanks/socials" . }}
-  <div class="position-relative">
+  <div class="position-relative hb-module py-3 py-lg-4">
+    <h2 id="donate" class="d-flex justify-content-center align-items-center border-bottom pb-4 mb-4">
+      {{- i18n "donate" -}}
+    </h2>
+    {{ partial "hb/modules/razonyang-thanks/socials" . }}
+  </div>
+  <div class="position-relative hb-module py-3 py-lg-5">
     <h2 id="sponsors" class="d-flex justify-content-center align-items-center border-bottom pb-4 mb-4">
       {{- i18n "sponsors" -}}
       <span
@@ -12,7 +17,7 @@
     </h2>
     {{ partial "hb/modules/razonyang-thanks/sponsors" dict }}
   </div>
-  <div class="position-relative">
+  <div class="position-relative hb-module py-3 py-lg-5">
     <h2 id="backers" class="d-flex justify-content-center align-items-center border-bottom pb-4 mb-4">
       {{- i18n "backers" -}}
       <span class="badge bg-primary ms-2 rounded-circle fw-normal fs-6">
@@ -25,7 +30,7 @@
     </h2>
     {{ partial "hb/modules/razonyang-thanks/backers" dict }}
   </div>
-  <div class="position-relative">
+  <div class="position-relative hb-module py-3 py-lg-5">
     <h2 id="contributors" class="d-flex justify-content-center align-items-center border-bottom pb-4 mb-4">
       {{- i18n "contributors" -}}
       <span class="badge bg-primary ms-2 rounded-circle fw-normal fs-6">
