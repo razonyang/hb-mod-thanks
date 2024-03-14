@@ -1,6 +1,13 @@
 <div class="hb-thanks">
-  <h1 class="text-center mb-4">{{ .Title }}</h1>
-  <div class="lead text-center mb-4">{{ .Description }}</div>
+  {{- with partial "_funcs/get-page-images" . }}
+    {{- $img := index . 0 }}
+    <img class="hb-thanks-banner w-100 object-fit-cover mb-4 rounded" src="{{ $img.RelPermalink }}">
+  {{- end }}
+  <div
+    class="hb-module hb-thanks-heading py-5">
+    <h1 class="text-center mb-4 pb-4 border-bottom">{{ .Title }}</h1>
+    <div class="lead text-center mb-4">{{ .Description }}</div>
+  </div>
   <div class="position-relative hb-module py-3 py-lg-4">
     <h2 id="donate" class="d-flex justify-content-center align-items-center border-bottom pb-4 mb-4">
       {{- i18n "donate" -}}
