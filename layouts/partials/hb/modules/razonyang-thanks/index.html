@@ -1,7 +1,10 @@
 <div class="hb-thanks">
   {{- with partial "_funcs/get-page-images" . }}
     {{- $img := index . 0 }}
-    <img class="hb-thanks-banner w-100 object-fit-cover mb-4 rounded" src="{{ $img.RelPermalink }}">
+    <img
+      class="hb-thanks-banner w-100 object-fit-cover mb-4 rounded"
+      {{- with $img.Image }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}
+      src="{{ $img.RelPermalink }}">
   {{- end }}
   <div
     class="hb-module hb-thanks-heading py-5">
