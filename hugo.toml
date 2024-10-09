@@ -7,7 +7,13 @@ path = "github.com/hbstack/hb"
 [params.hugopress.modules.hb-razonyang-thanks.hooks.hb-footer-end]
 cacheable = true
 
+[params.hugopress.modules.hb-razonyang-thanks.hooks.hb-docs-doc-toc-begin]
+cacheable = true
+
 [params.hugopress.modules.hb-razonyang-thanks.hooks.hb-docs-doc-toc-end]
+cacheable = true
+
+[params.hugopress.modules.hb-razonyang-thanks.hooks.hb-blog-post-toc-begin]
 cacheable = true
 
 [params.hugopress.modules.hb-razonyang-thanks.hooks.hb-blog-post-toc-end]

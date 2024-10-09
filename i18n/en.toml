@@ -13,6 +13,9 @@ other = "Contributors"
 [donate]
 other = "Donate"
 
+[donate_info]
+other = "Become a backer or sponsor to support our work."
+
 [gold_backers]
 other = "Gold backers"
 
