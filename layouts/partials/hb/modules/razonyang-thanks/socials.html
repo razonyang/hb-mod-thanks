@@ -1,12 +1,13 @@
 {{- with site.Params.hb.thanks.socials }}
-  <div class="hb-thanks-socials gap-4 d-flex mb-2 justify-content-center mb-5">
+  <div class="hb-thanks-socials gap-4 d-flex flex-wrap mb-2 justify-content-center mb-5">
     {{- range $name, $id := . }}
       {{ partial "hb/modules/socials/link" (dict
         "name" $name
         "id" $id
-        "class" "hb-thanks-social"
-        "width" "3em"
-        "height" "3em")
+        "text" true
+        "class" "hb-thanks-social d-flex flex-column justify-content-center align-items-center gap-2 text-decoration-none text-center h-100"
+        "width" "2em"
+        "height" "2em")
       }}
     {{- end }}
   </div>

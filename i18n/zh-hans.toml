@@ -13,6 +13,9 @@ other = "贡献者"
 [donate]
 other = "赞助"
 
+[donate_info]
+other = "成为我们的资助者或赞助商，以支持我们的工作。"
+
 [gold_backers]
 other = "金牌支持者"
 

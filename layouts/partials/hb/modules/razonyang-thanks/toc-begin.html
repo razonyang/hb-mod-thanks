@@ -1,10 +1,5 @@
 <div class="hb-module py-3">
   <div class="h5 text-center mb-3 border-bottom pb-3">{{ i18n "donate" }}</div>
+  <p class="text-center">{{ i18n "donate_info" }}</p>
   {{ partial "hb/modules/razonyang-thanks/socials" . }}
-</div>
-<div class="hb-module">
-  {{ partial "hb/modules/razonyang-thanks/sponsors" (dict
-    "Levels" (slice "gold")
-    "Heading" false)
-  }}
 </div>
