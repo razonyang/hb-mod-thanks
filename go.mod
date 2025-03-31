@@ -3,9 +3,9 @@ module github.com/razonyang/hb-mod-thanks
 go 1.19
 
 require (
-	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 // indirect
+	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20400 // indirect
 	github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000 // indirect
-	github.com/hbstack/hb v0.15.3 // indirect
+	github.com/hbstack/hb v0.16.2 // indirect
 	github.com/hbstack/socials v0.17.0 // indirect
 	github.com/hugomods/ascii v0.1.0 // indirect
 	github.com/hugomods/base v0.7.2 // indirect
